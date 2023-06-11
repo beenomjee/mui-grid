@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
-import { Box, CircularProgress, CssBaseline, Grid, Pagination, PaginationItem, useMediaQuery, } from '@mui/material';
+import { Box, CircularProgress, Grid, Pagination, PaginationItem, useMediaQuery, } from '@mui/material';
 import axios from 'axios';
 import { useEffect, useState } from 'react'
 
 const getImages = async () => {
   const requests = [];
   for (let i = 0; i < 100; i++) {
-    requests.push(axios.get('https://source.unsplash.com/200x200/?nature,water,sky,sun,moon,earth,jupiter,america,pakistan,india,man,boy', {
+    requests.push(axios.get('https://source.unsplash.com/200x200/?nature,water,sky,sun,moon,earth,jupiter,america,pakistan,man,boy', {
       responseType: 'blob'
     }));
   }
